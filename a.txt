@@ -1,1 +1,3 @@
 new file not added yet
+added and commited
+changing after commit
