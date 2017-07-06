@@ -47,6 +47,6 @@ integrations:
        - #recp2
 
   hub:
-    - integrationName:
+    - integrationName: github
       type:
       agent_only:
