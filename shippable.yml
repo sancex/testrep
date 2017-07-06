@@ -40,13 +40,13 @@ build:
 
 integrations:
  notifications:
-   - integrationName:
-     type:
+   - integrationName: github
+     type: GitHub
      recipients:
        - #recp1
        - #recp2
 
   hub:
     - integrationName: github
-      type:
+      type: GitHub
       agent_only:
