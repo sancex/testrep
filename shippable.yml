@@ -15,10 +15,6 @@ matrix:
 build:
   ci:
     - php a.php
-    - #command2
-  post_ci:
-    - #command1
-    - #command2
   on_success:
     - echo 'success'
    
