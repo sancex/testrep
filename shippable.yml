@@ -3,15 +3,6 @@ language: php
 php:
   - 7.3
 
-services:
-  - #any supported service
-
-env:
-  - #env1=foo
-  - #env2=bar
-
-matrix:
-
 build:
   ci:
     - php a.php
