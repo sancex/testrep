@@ -24,17 +24,3 @@ build:
    
   on_failure:
     - echo 'wht' #command1
-
-
-integrations:
- notifications:
-   - integrationName: github
-     type: GitHub
-     recipients:
-       - #recp1
-       - #recp2
-
-  hub:
-    - integrationName: github
-      type: GitHub
-      agent_only:
