@@ -13,30 +13,18 @@ env:
 matrix:
 
 build:
-
-  pre_ci:
-
-  pre_ci_boot:
-    image_name:
-    image_tag:
-    pull:
-    options:
   ci:
-    - echo 'hello world'
+    - php a.php
     - #command2
   post_ci:
     - #command1
     - #command2
   on_success:
-    - #command1
-    - #command2
+    - echo 'success'
+   
   on_failure:
-    - #command1
-    - #command2
-  cache:
-  cache_dir_list:
-    - #dir1
-  push:
+    - echo 'wht' #command1
+
 
 integrations:
  notifications:
