@@ -1,10 +1,8 @@
-language: php
+language: python
 
 build:
-  post_ci_boot:
-   - cp phpinstall /usr/local/bin/phpenv-install
-   - yum -y install php
   ci:
+    - yum -y install php
     - echo 'ok'
   on_success:
     - echo 'success'
