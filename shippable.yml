@@ -1,6 +1,6 @@
 build:
   ci:
-    - php a.php
+    - /usr/bin/php a.php
   on_success:
     - echo 'success'
    
