@@ -1,10 +1,4 @@
-language: php
-php:
-  - 7.2.15
-  
 build:
-  pre-ci:
-    - yum -y install php
   ci:
     - echo 'ok'
   on_success:
