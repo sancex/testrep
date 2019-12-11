@@ -1,9 +1,12 @@
-language: python
+language: php
+php:
+  - "7.2"
 
 build:
   ci:
     - yum -y install php
     - echo 'ok'
+    - php a.php
   on_success:
     - echo 'success'
    
