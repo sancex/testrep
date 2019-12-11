@@ -1,6 +1,7 @@
+language: php
 build:
   ci:
-    - /usr/bin/php a.php
+    - echo 'ok'
   on_success:
     - echo 'success'
    
