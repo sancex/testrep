@@ -1,4 +1,8 @@
+language: php
+
 build:
+  pre_ci_boot:
+    - cp phpinstall /usr/local/bin/phpenv-install
   ci:
     - echo 'ok'
   on_success:
