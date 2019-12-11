@@ -1,7 +1,4 @@
-language: php
-php:
-  - "7.2"
-
+language: python
 build:
   ci:
     - yum -y install php
