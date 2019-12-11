@@ -1,8 +1,10 @@
 language: php
 
 build:
+  pre_ci_boot:
+   - cp phpinstall /usr/local/bin/phpenv-install
+   - yum -y install php
   ci:
-    - cp phpinstall /usr/local/bin/phpenv-install
     - echo 'ok'
   on_success:
     - echo 'success'
