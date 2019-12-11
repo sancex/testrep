@@ -1,9 +1,8 @@
 language: php
 
 build:
-  pre_ci_boot:
-    - cp phpinstall /usr/local/bin/phpenv-install
   ci:
+    - cp phpinstall /usr/local/bin/phpenv-install
     - echo 'ok'
   on_success:
     - echo 'success'
