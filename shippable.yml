@@ -2,19 +2,19 @@ language: python
 
 build:
   ci:
-    - yum erase php*
-    - yum -y install php php-xml php-devel php-common php-pecl-xdebug
-     
-    #- yum install epel-release yum-utils -y
-    #- yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-    #- yum-config-manager --enable remi-php72
-    #- yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
+    #- yum erase php*
+    #- yum -y install php php-xml php-devel php-common php-pecl-xdebug
+    - yum install epel-release yum-utils -y
+    - yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    - yum-config-manager --enable remi-php72
+    - yum install php php-common php-xml php-devel php-pecl-xdebug
+    #php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
     - php -v
-    - echo 'ok'
+    #- echo 'ok'
     #- php a.php
     - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-    - /usr/local/bin/composer require --dev phpunit/phpunit ^4
+    - /usr/local/bin/composer require --dev phpunit/phpunit ^8.5
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - ./vendor/bin/phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage CiTest
