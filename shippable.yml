@@ -5,6 +5,7 @@ build:
     - yum -y install php
     - echo 'ok'
     - php a.php
+    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - composer require --dev phpunit/phpunit ^8.5
     - phpunit CiTest
     
