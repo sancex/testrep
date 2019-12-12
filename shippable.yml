@@ -4,8 +4,7 @@ build:
   ci:
     - yum erase php*
     - yum -y install php php-xml php-devel php-common 
-    - pecl install xdebug
-    
+     
     #- yum install epel-release yum-utils -y
     #- yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     #- yum-config-manager --enable remi-php72
