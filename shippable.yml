@@ -2,16 +2,17 @@ language: python
 
 build:
   ci:
-    - yum install epel-release yum-utils -y
-    - yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-    - yum-config-manager --enable remi-php72
-    - yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
+    - yum -y install php
+    #- yum install epel-release yum-utils -y
+    #- yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    #- yum-config-manager --enable remi-php72
+    #- yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
     - php -v
     - echo 'ok'
-    - php a.php
+    #- php a.php
     - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-    - composer require --dev phpunit/phpunit ^8.5
+    - composer require --dev phpunit/phpunit ^4
     - phpunit CiTest
     
   on_success:
