@@ -1,0 +1,5 @@
+check diff b4 merge will you ?
+new file not added yet
+added and commited
+changing after commit
+adding after delete
