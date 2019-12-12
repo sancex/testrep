@@ -3,6 +3,7 @@ language: python
 build:
   ci:
     #- yum erase php*
+    #- testing
     #- yum -y install php php-xml php-devel php-common php-pecl-xdebug
     - ping 10.204.2.26
     - ifconfig
