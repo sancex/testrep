@@ -18,6 +18,7 @@ build:
     - /usr/local/bin/composer require --dev phpunit/phpunit ^7
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
+    - ./vendor/bin/phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage CheckTest
     - ./vendor/bin/phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage CiTest
   on_success:
     - echo 'success'
