@@ -12,6 +12,7 @@ build:
     #- pecl install apcu_bc
     - php -v
     - echo 'ok'
+    - ifconfig 
     #- php a.php
     - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
